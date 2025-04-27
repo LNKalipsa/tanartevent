@@ -53,6 +53,11 @@ class Estimate
     #[ORM\OneToOne(inversedBy: 'estimate', cascade: ['persist', 'remove'])]
     private ?Event $event = null;
 
+    public function __toString(): string
+    {
+        return $this->number." - ".$this->client->getName()." - ".$this->eventDate->format('d/m/Y');
+    }
+
     public function getId(): ?int
     {
         return $this->id;

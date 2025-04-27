@@ -16,7 +16,7 @@
     font-style: normal;
 } */
 
-h1 {
+/* h1 {
     @apply text-5xl mx-auto my-2 md:text-8xl font-title text-center text-primary-purple;
 }
 h2 {
@@ -82,4 +82,4 @@ p {
 }
 .thumbnail-event {
     @apply w-11/12 sm:w-2/5 mx-4 border border-primary-pink shadow-xl p-4 my-4 hover:scale-110
-}
+} */

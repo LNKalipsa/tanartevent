@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\InvoiceRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use \DateTimeImmutable;
 
 #[ORM\Entity(repositoryClass: InvoiceRepository::class)]
 class Invoice
@@ -42,6 +43,10 @@ class Invoice
     #[ORM\JoinColumn(nullable: false)]
     private ?Estimate $estimate = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Address $address = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -61,7 +66,7 @@ class Invoice
 
     public function getEmissionDate(): ?\DateTimeImmutable
     {
-        return $this->emissionDate;
+        return $this->emissionDate  ?? new DateTimeImmutable();
     }
 
     public function setEmissionDate(\DateTimeImmutable $emissionDate): static
@@ -154,4 +159,10 @@ class Invoice
 
         return $this;
     }
+
+    public function getAddress(): ?Address
+    {
+        return $this->estimate->getClient()->getAddress();
+    }
+
 }
