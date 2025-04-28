@@ -162,7 +162,7 @@ class Invoice
 
     public function getAddress(): ?Address
     {
-        return $this->estimate->getClient()->getAddress();
+        return ($this->estimate) ? $this->estimate->getClient()->getAddress() : null;
     }
 
 }

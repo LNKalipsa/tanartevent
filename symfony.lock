@@ -38,6 +38,9 @@
             "config/routes/easyadmin.yaml"
         ]
     },
+    "insitaction/easyadmin-fields-bundle": {
+        "version": "5.1.0"
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {

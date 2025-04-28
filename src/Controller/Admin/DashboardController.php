@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controller\Admin;
+
+use App\Entity\Address;
 use App\Entity\Client;
 use App\Entity\Contact;
 use App\Entity\Design;
@@ -9,13 +11,14 @@ use App\Entity\Event;
 use App\Entity\Invoice;
 use App\Entity\Tag;
 use App\Entity\User;
+use EasyCorp\Bundle\EasyAdminBundle\Asset\AssetPackage;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
+use Insitaction\EasyAdminFieldsBundle\EasyAdminFieldsBundle;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
 
 class DashboardController extends AbstractDashboardController
 {
@@ -48,4 +51,15 @@ class DashboardController extends AbstractDashboardController
             
             
     }
+    
+    public function configureAssets(): \EasyCorp\Bundle\EasyAdminBundle\Config\Assets
+    {
+        $jsAsset = \EasyCorp\Bundle\EasyAdminBundle\Config\Asset::new('app.js')->package(AssetPackage::PACKAGE_NAME);
+        $cssAsset = \EasyCorp\Bundle\EasyAdminBundle\Config\Asset::new('app.css')->package(AssetPackage::PACKAGE_NAME);
+
+        return parent::configureAssets()
+            ->addJsFile($jsAsset)
+            ->addCssFile($cssAsset);
+    }
+    
 }

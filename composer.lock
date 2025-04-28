@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06070a1d93070dc136aeed7615fedf28",
+    "content-hash": "c85ddd02da8565556202cf26969b8fc3",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -1392,6 +1392,52 @@
                 }
             ],
             "time": "2025-03-06T22:45:56+00:00"
+        },
+        {
+            "name": "insitaction/easyadmin-fields-bundle",
+            "version": "5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TCM-dev/EasyAdminFieldsBundle.git",
+                "reference": "d2c2a4ea5fed04dcf41191a2f7e9dc914348ecda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TCM-dev/EasyAdminFieldsBundle/zipball/d2c2a4ea5fed04dcf41191a2f7e9dc914348ecda",
+                "reference": "d2c2a4ea5fed04dcf41191a2f7e9dc914348ecda",
+                "shasum": ""
+            },
+            "require": {
+                "easycorp/easyadmin-bundle": "^4",
+                "php": ">=8.0",
+                "symfony/framework-bundle": "^v6.1|^7.0",
+                "symfony/webpack-encore-bundle": "^1.15|^2"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Insitaction\\EasyAdminFieldsBundle\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Valentin Wojtasinski",
+                    "email": "vwojtasinski@insitaction.com"
+                }
+            ],
+            "description": "Set of easyadmin fields and useful helpers for Insitaction",
+            "support": {
+                "issues": "https://github.com/TCM-dev/EasyAdminFieldsBundle/issues",
+                "source": "https://github.com/TCM-dev/EasyAdminFieldsBundle/tree/v5.1.0"
+            },
+            "time": "2024-02-02T23:52:33+00:00"
         },
         {
             "name": "jms/metadata",
